@@ -75,4 +75,5 @@ function rgbToHex(r, g, b) {
 
   // 헥스 코드로 변환된 값 반환
   return '#' + hexR + hexG + hexB;
-}```
+}
+```
