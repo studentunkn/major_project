@@ -1,6 +1,6 @@
 # major_project
 ```js
-let bt, p, result, R, G, B;
+let bt, p, result, R, G, B, co;
 let r, g, b;
 
 function setup() {
@@ -31,6 +31,10 @@ function setup() {
   result = createP('');
   result.style('font-size','15px');
   result.position(65,125);
+  
+  co = createP('');
+  co.style('font-size','20px');
+  co.position(65,90);
 }
 
 function draw() {
@@ -59,8 +63,8 @@ function changeColor() {
   result.html(hexCode);
   result.show();
   
-  fill(0);
-  text('()',65,120);
+  co.html('(' + (255-R) + ',' + (255-G) + ',' + (255-B) + ')');
+  co.show();
 }
 
 function rgbToHex(r, g, b) {
@@ -71,6 +75,4 @@ function rgbToHex(r, g, b) {
 
   // 헥스 코드로 변환된 값 반환
   return '#' + hexR + hexG + hexB;
-}
-
-```
+}```
